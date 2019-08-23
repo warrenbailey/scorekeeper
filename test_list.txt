@@ -1,6 +1,8 @@
 [x] get the score of a player at start returns 0
 [x] add 10 to the score of a player and then get returns 10
-[x] add 10 to the score of a player then add 5, final score is 15
+[ ] add 10 to the score of a player and then another 10 and get returns 20
+
+# For workshop:
 [ ] subtract 5 from a score of 10 to get 5
 [ ] subtract 5 from a score of 10 to get 5 and then subtract 5 again to get to 0
 [ ] subtract 5 from a score of 0 to get 0
