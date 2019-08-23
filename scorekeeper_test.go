@@ -27,3 +27,25 @@ func TestAddPointsAgain(t *testing.T) {
 	scorer.Add("Sandy", 10)
 	assert.Equal(t, 20, scorer.Get("Sandy"))
 }
+
+func TestSubtractPoints(t *testing.T) {
+	scorer := scorekeeper.NewScorer()
+	scorer.Add("Sandy", 10)
+	scorer.Remove("Sandy", 5)
+	assert.Equal(t, 5, scorer.Get("Sandy"))
+}
+
+func TestSubtractPointsAgain(t *testing.T) {
+	scorer := scorekeeper.NewScorer()
+	scorer.Add("Sandy", 10)
+	scorer.Remove("Sandy", 5)
+	scorer.Remove("Sandy", 5)
+	assert.Equal(t, 0, scorer.Get("Sandy"))
+}
+
+func TestSubtractFromZero(t *testing.T) {
+	scorer := scorekeeper.NewScorer()
+	scorer.Add("Sandy", 0)
+	scorer.Remove("Sandy", 5)
+	assert.Equal(t, 0, scorer.Get("Sandy"))
+}

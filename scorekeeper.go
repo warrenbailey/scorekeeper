@@ -18,3 +18,11 @@ func (s Scorer) Add(player string, point int) {
 	currentScore := s.scores[player]
 	s.scores[player] = point + currentScore
 }
+
+func (s Scorer) Remove(player string, point int) {
+	currentScore := s.scores[player]
+	newScore := currentScore - point
+	if newScore >= 0 {
+		s.scores[player] = newScore
+	}
+}
